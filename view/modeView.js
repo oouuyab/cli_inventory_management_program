@@ -4,7 +4,7 @@ const option = [
     {
         type: 'input',
         name: 'menu',
-        message: '명령어를 작성하세요(q[quit]: 종료)'
+        message: '입력(i[income]: 입고, o[outcome]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
     }
 ];
 
