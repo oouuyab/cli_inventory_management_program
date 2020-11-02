@@ -1,4 +1,7 @@
 const inquirer = require('inquirer');
+const issueView = require('./issueView');
+const receiptView = require('./receiptView');
+const listView = require('./listView');
 
 const option = [
     {
@@ -13,9 +16,19 @@ const setMode = async (choice) => {
         let mode = choice.menu;
         let message;
         if (mode === 'q') {
-            message = '프로그램을 종료합니다.';
-            console.log(message);
-            return message;
+            console.log('프로그램을 종료합니다.');
+            return;
+        } else if (mode === 'i') {
+            console.log('issue 모드에 진입합니다.');
+            return issueView();
+        } else if (mode === 'r') {
+            console.log('receipt 모드에 진입합니다.');
+            return receiptView();
+        } else if (mode === 'l') {
+            console.log('list 모드에 진입합니다.');
+            return listView();
+        } else {
+            return getMode();
         }
     } catch (err) {
         console.log('setMode err');
