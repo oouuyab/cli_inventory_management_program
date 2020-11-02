@@ -17,7 +17,7 @@ describe('getMode test', () => {
             const res = await cmd.execute('app.js', [], []);
             const result = convertCommonText(res.trim().split(EOL).pop());
             expect(result).to.eql(
-                '? 입력(i[income]: 입고, o[outcome]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
+                '? 입력(r[receipt]: 입고, i[issue]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
             );
         });
     });
@@ -27,7 +27,7 @@ describe('getMode test', () => {
             const res = await cmd.execute('app.js', [], [ENTER]);
             const result = convertCommonText(res.trim().split(EOL).pop());
             expect(result).to.eql(
-                '? 입력(i[income]: 입고, o[outcome]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
+                '? 입력(r[receipt]: 입고, i[issue]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
             );
         });
 
@@ -35,7 +35,7 @@ describe('getMode test', () => {
             const res = await cmd.execute('app.js', [], [ENTER]);
             const result = convertCommonText(res.trim().split(EOL).pop());
             expect(result).to.eql(
-                '? 입력(i[income]: 입고, o[outcome]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
+                '? 입력(r[receipt]: 입고, i[issue]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
             );
         });
 
