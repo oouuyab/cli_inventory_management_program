@@ -7,7 +7,7 @@ const option = [
     {
         type: 'input',
         name: 'menu',
-        message: '입력(i[income]: 입고, o[outcome]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
+        message: '입력(r[receipt]: 입고, i[issue]: 출고, l[list]: 재고 리스트, q[quit]: 종료) : '
     }
 ];
 
@@ -19,10 +19,10 @@ const setMode = async (choice) => {
             console.log('프로그램을 종료합니다.');
             return;
         } else if (mode === 'i') {
-            console.log('issue 모드에 진입합니다.');
+            console.log('issue(출고) 모드에 진입합니다.');
             return issueView();
         } else if (mode === 'r') {
-            console.log('receipt 모드에 진입합니다.');
+            console.log('receipt(입고) 모드에 진입합니다.');
             return receiptView();
         } else if (mode === 'l') {
             console.log('list 모드에 진입합니다.');
